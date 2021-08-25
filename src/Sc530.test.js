@@ -1,12 +1,12 @@
 import React from "react";
 import { render } from "@testing-library/react";
-import styled, { createGlobalStyle } from "styled-components52";
+import styled, { createGlobalStyle } from "styled-components530";
 
 const TestComponent = styled.div`
   background-color: #0000ff;
 `;
 
-test("5.2.0: Get computed style", () => {
+test("5.3.0: Get computed style", () => {
   const testComponent = render(
     <TestComponent data-testid="test" />
   ).getByTestId("test");
@@ -22,7 +22,7 @@ const GlobalStyles = createGlobalStyle`
   }
 `;
 
-test("5.2.0: Global Styles", () => {
+test("5.3.0: Global Styles", () => {
   render(<GlobalStyles />);
   expect(window.getComputedStyle(document.body).fontFamily).toBe("Test");
 });
